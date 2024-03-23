@@ -1,113 +1,95 @@
 #include "main.hpp"
-#include <windows.h>
+#include "_hooks.h"
 #include "oxorany.h"
 #include "detours.h"
 #include <iostream>
 #include "SignatureScan.hpp"
+#include "globals.h"
 
-typedef void(__fastcall* PICKUP_SAMPLE_FUNCTION)(__int64 a1, int a2, int a3, int a4);
-PICKUP_SAMPLE_FUNCTION PickupSample = nullptr;
+//typedef void(__fastcall* PICKUP_SAMPLE_FUNCTION)(__int64 a1, int a2, int a3, int a4);
+//PICKUP_SAMPLE_FUNCTION PickupSample = nullptr;
+//
+//typedef bool(__fastcall* IS_STRATAGEM_UNLOCKED_FUNCTION)(__int64 a1, int a2);
+//IS_STRATAGEM_UNLOCKED_FUNCTION IsStratagemUnlocked = nullptr;
+//
+//typedef bool(__fastcall* IS_ARMOR_UNLOCKED_FUNCTION)(int* a1);
+//IS_ARMOR_UNLOCKED_FUNCTION IsArmorUnlocked = nullptr;
+//
+//typedef char(__fastcall* IS_EQUIPMENT_UNLOCKED_FUNCTION)(DWORD* a1, int a2);
+//IS_EQUIPMENT_UNLOCKED_FUNCTION IsEquipmentUnlocked = nullptr;
+//
+//typedef void(__fastcall* ROUTINE_DEPLOYMENT_TIME_FUNCTION)(__int64* a1, float a2);
+//ROUTINE_DEPLOYMENT_TIME_FUNCTION RoutineDeploymentTime = nullptr;
+//
+//typedef __int64(__fastcall* WEAPON_AMMO_REDUCTION_FUNCTION)(__int64 a1, unsigned int a2);
+//WEAPON_AMMO_REDUCTION_FUNCTION WeaponAmmoReduction = nullptr;
+//
+//typedef __int64(__fastcall* STRATAGEM_REDUCTION_FUNCTION)(__int64 a1, unsigned int a2, char a3, __int64 a4);
+//STRATAGEM_REDUCTION_FUNCTION StratagemReduction = nullptr;
+//
+//typedef void(__fastcall* STAMINA_REDUCTION_FUNCTION)(__int64 a1, int a2, float a3);
+//STAMINA_REDUCTION_FUNCTION StaminaReduction = nullptr;
+//
+//typedef void(__fastcall* ENEMY_MELEE_DAMAGE_FUNCTION)(__int64 a1, __int64 a2, unsigned int a3, int a4, unsigned int a5);
+//ENEMY_MELEE_DAMAGE_FUNCTION EnemyBasicDamage = nullptr;
+//
+//void __fastcall dPickupSample(__int64 a1, int a2, int amount, int sampleType) {
+//	PickupSample(a1, a2, 20, 1);
+//	PickupSample(a1, a2, 10, 2);
+//	PickupSample(a1, a2,  2, 3);
+//}
+//
+//bool __fastcall dIsStratagemUnlocked(__int64 a1, int StratagemId) {
+//	return true;
+//}
+//
+//bool __fastcall dIsArmorUnlocked(int* armorObject) {
+//	return true;
+//}
+//
+//char __fastcall dIsEquipmentUnlocked(DWORD* a1, int equipmentId) {
+//	return true;
+//}
+//
+//void __fastcall dRoutineDeploymentTime(__int64* a1, float timeSteps) {
+//	RoutineDeploymentTime(a1, 100.f);
+//}
+//
+//__int64 __fastcall dWeaponAmmoReduction(__int64 a1, unsigned int weaponId) {
+//	return NULL;
+//}
+//
+//__int64 dStratagemReduction(__int64 a1, unsigned int a2, char a3, __int64 a4) {
+//	return NULL;
+//}
+//
+//void dStaminaReduction(__int64 a1, int a2, float a3) {
+//	return;
+//}
+//
+//void dEnemyBasicDamage(__int64 target, __int64 a2, unsigned int a3, int damage, unsigned int typeMaybe) {
+//	EnemyBasicDamage(target, a2, a3, 0, typeMaybe);
+//}
 
-typedef bool(__fastcall* IS_STRATAGEM_UNLOCKED_FUNCTION)(__int64 a1, int a2);
-IS_STRATAGEM_UNLOCKED_FUNCTION IsStratagemUnlocked = nullptr;
-
-typedef bool(__fastcall* IS_ARMOR_UNLOCKED_FUNCTION)(int* a1);
-IS_ARMOR_UNLOCKED_FUNCTION IsArmorUnlocked = nullptr;
-
-typedef char(__fastcall* IS_EQUIPMENT_UNLOCKED_FUNCTION)(DWORD* a1, int a2);
-IS_EQUIPMENT_UNLOCKED_FUNCTION IsEquipmentUnlocked = nullptr;
-
-typedef void(__fastcall* ROUTINE_DEPLOYMENT_TIME_FUNCTION)(__int64* a1, float a2);
-ROUTINE_DEPLOYMENT_TIME_FUNCTION RoutineDeploymentTime = nullptr;
-
-typedef __int64(__fastcall* WEAPON_AMMO_REDUCTION_FUNCTION)(__int64 a1, unsigned int a2);
-WEAPON_AMMO_REDUCTION_FUNCTION WeaponAmmoReduction = nullptr;
-
-typedef __int64(__fastcall* STRATAGEM_REDUCTION_FUNCTION)(__int64 a1, unsigned int a2, char a3, __int64 a4);
-STRATAGEM_REDUCTION_FUNCTION StratagemReduction = nullptr;
-
-typedef void(__fastcall* STAMINA_REDUCTION_FUNCTION)(__int64 a1, int a2, float a3);
-STAMINA_REDUCTION_FUNCTION StaminaReduction = nullptr;
-
-typedef void(__fastcall* ENEMY_MELEE_DAMAGE_FUNCTION)(__int64 a1, __int64 a2, unsigned int a3, int a4, unsigned int a5);
-ENEMY_MELEE_DAMAGE_FUNCTION EnemyBasicDamage = nullptr;
-
-void __fastcall dPickupSample(__int64 a1, int a2, int amount, int sampleType) {
-	PickupSample(a1, a2, 20, 1);
-	PickupSample(a1, a2, 10, 2);
-	PickupSample(a1, a2,  2, 3);
-}
-
-bool __fastcall dIsStratagemUnlocked(__int64 a1, int StratagemId) {
-	return true;
-}
-
-bool __fastcall dIsArmorUnlocked(int* armorObject) {
-	return true;
-}
-
-char __fastcall dIsEquipmentUnlocked(DWORD* a1, int equipmentId) {
-	return true;
-}
-
-void __fastcall dRoutineDeploymentTime(__int64* a1, float timeSteps) {
-	RoutineDeploymentTime(a1, 100.f);
-}
-
-__int64 __fastcall dWeaponAmmoReduction(__int64 a1, unsigned int weaponId) {
-	return NULL;
-}
-
-__int64 dStratagemReduction(__int64 a1, unsigned int a2, char a3, __int64 a4) {
-	return NULL;
-}
-
-void dStaminaReduction(__int64 a1, int a2, float a3) {
-	return;
-}
-
-void dEnemyBasicDamage(__int64 target, __int64 a2, unsigned int a3, int damage, unsigned int typeMaybe) {
-	EnemyBasicDamage(target, a2, a3, 0, typeMaybe);
-}
-
-bool HookFunction(PVOID* ppPointer, PVOID pDetour, const char* functionName) {
-	if (const auto error = DetourAttach(ppPointer, pDetour); error != NO_ERROR) {
-		std::cout << oxorany("Failed to hook ") << functionName << ", error " << error << std::endl;
-		return false;
-	}
-	std::cout << oxorany("Hooked ") << functionName << std::endl;
-	return true;
-}
-
-#define HOOKFUNC(n) if (!HookFunction(&(PVOID&)n, d ## n, #n)) return;
-
-#define UNHOOKFUNC(n) if (!UnhookFunction(&(PVOID&)n, d ## n, #n)) return;
-
-void InitializeConsole() {
-	FILE* pFile = nullptr;
-	AllocConsole();
-	freopen_s(&pFile, oxorany("CONOUT$"), oxorany("w"), stdout);
-}
-
-void DestroyConsole()
+void Run(LPVOID lpParam)
 {
-	DestroyWindow(GetConsoleWindow());
-	FreeConsole();
-}
-
-
-void Init() {
-	HMODULE moduleHandle = nullptr;
-
+	// wait for game.dll to load
 	do
 	{
-		moduleHandle = GetModuleHandle(oxorany(L"game.dll"));
+		moduleHandle = GetModuleHandle(oxorany("game.dll"));
 		Sleep(1000);
 	} while (!moduleHandle);
 	Sleep(100);
 
 	InitializeConsole();
-	DetourTransactionBegin();
+
+	// grab the window handle
+	WindowHwnd =  (HWND)FindWindow(0, "Renderer: [DirectX12], Input: [Raw input], 64 bits");
+
+	// initialize the detours
+	DetourInitilization();
+
+	/*DetourTransactionBegin();
 	DetourUpdateThread(GetCurrentThread());
 
 	PickupSample = SignatureScan<PICKUP_SAMPLE_FUNCTION>(oxorany("45 85 C9 0F 84 ? ? ? ? 48 89 6C 24 ? 41 56"), moduleHandle);
@@ -131,7 +113,9 @@ void Init() {
 	HOOKFUNC(EnemyBasicDamage);
 
 	DetourTransactionCommit();
+	*/
 
+	// wait for the game to close
 	while(true)
 	{
 		Sleep(1000);

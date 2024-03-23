@@ -44,7 +44,7 @@ void load_dxgi() {
 	char systemPath[MAX_PATH];
 	GetSystemDirectoryA(systemPath, MAX_PATH);
 	strcat_s(systemPath, oxorany("\\dxgi.dll"));
-	dxgi_dll = LoadLibraryA(systemPath);	
+	dxgi_dll = LoadLibraryA(systemPath);
 
 	if (!dxgi_dll) return;
 	
@@ -73,12 +73,11 @@ void load_dxgi() {
 DWORD WINAPI Load(LPVOID lpParam) {
 	load_dxgi();
 	if (!dxgi_dll) {
-		MessageBoxEx(0, oxorany(L"Failed to load dxgi.dll"), oxorany(L"Error"), MB_ICONERROR, 0);
 		return 0;
 	}
 	CloseHandle(dxgi_dll);
 
-	Init();
+	Run(lpParam);
 
 	return 0;
 }

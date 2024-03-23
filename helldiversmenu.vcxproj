@@ -13,16 +13,21 @@
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\framework\dxgi.cpp" />
+    <ClCompile Include="src\hooks\directx.cpp" />
+    <ClCompile Include="src\hooks\_hooks.cpp" />
     <ClCompile Include="src\include\detours\detours.cpp" />
     <ClCompile Include="src\include\detours\disasm.cpp" />
     <ClCompile Include="src\include\detours\modules.cpp" />
     <ClCompile Include="src\include\oxorany\oxorany.cpp" />
+    <ClCompile Include="src\user\globals.h" />
     <ClCompile Include="src\user\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\framework\dxgi.h" />
     <ClInclude Include="src\framework\SignatureScan.hpp" />
+    <ClInclude Include="src\hooks\_hooks.h" />
     <ClInclude Include="src\include\detours\detours.h" />
+    <ClInclude Include="src\include\DirectX12.h" />
     <ClInclude Include="src\include\oxorany\oxorany.h" />
     <ClInclude Include="src\include\oxorany\oxorany_include.h" />
     <ClInclude Include="src\user\main.hpp" />
@@ -41,16 +46,16 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -84,7 +89,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
     </ClCompile>
@@ -107,7 +112,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
     </ClCompile>
