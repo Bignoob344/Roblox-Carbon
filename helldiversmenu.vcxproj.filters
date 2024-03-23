@@ -20,12 +20,20 @@
     <ClCompile Include="src\include\oxorany\oxorany.cpp">
       <Filter>include\oxorany</Filter>
     </ClCompile>
-    <ClCompile Include="src\user\globals.h" />
     <ClCompile Include="src\hooks\directx.cpp">
       <Filter>hooks</Filter>
     </ClCompile>
     <ClCompile Include="src\hooks\_hooks.cpp">
       <Filter>hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\globals.h">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="src\framework\app-functions.cpp">
+      <Filter>framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="src\hooks\_hooks.h">
       <Filter>hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\app-functions.h">
+      <Filter>framework</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

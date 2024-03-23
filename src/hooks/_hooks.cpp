@@ -42,7 +42,7 @@ void DetourInitilization() {
 
 	// hook dx12 functions
 	HOOKFUNC(Present12);
-	//HOOKFUNC(ExecuteCommandLists);
+	HOOKFUNC(ExecuteCommandLists);
 
 	DetourTransactionCommit();
 }

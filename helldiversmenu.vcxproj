@@ -11,7 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="globals.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\framework\app-functions.cpp" />
     <ClCompile Include="src\framework\dxgi.cpp" />
     <ClCompile Include="src\hooks\directx.cpp" />
     <ClCompile Include="src\hooks\_hooks.cpp" />
@@ -23,6 +25,7 @@
     <ClCompile Include="src\user\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\framework\app-functions.h" />
     <ClInclude Include="src\framework\dxgi.h" />
     <ClInclude Include="src\framework\SignatureScan.hpp" />
     <ClInclude Include="src\hooks\_hooks.h" />
