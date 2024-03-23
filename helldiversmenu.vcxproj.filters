@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\framework\dxgi.cpp">
+      <Filter>framework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\main.cpp">
+      <Filter>user</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\detours\detours.cpp">
+      <Filter>include\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\detours\disasm.cpp">
+      <Filter>include\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\detours\modules.cpp">
+      <Filter>include\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\oxorany\oxorany.cpp">
+      <Filter>include\oxorany</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="framework">
+      <UniqueIdentifier>{ebc59406-17ee-4758-87d1-73a480770097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks">
+      <UniqueIdentifier>{c0e0032a-5e93-4e3b-824f-719ceaeffa67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{eeb2d3f9-6e09-4248-897d-65959085307c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\detours">
+      <UniqueIdentifier>{3986fcd2-670c-425c-a81b-395d2c870e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\oxorany">
+      <UniqueIdentifier>{f19cc276-726b-4f5a-a0d1-c1c3b486a753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user">
+      <UniqueIdentifier>{3bce2a74-80a9-42bf-8bdd-aaf71af07b37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\framework\SignatureScan.hpp">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework\dxgi.h">
+      <Filter>framework</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\main.hpp">
+      <Filter>user</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\detours\detours.h">
+      <Filter>include\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\oxorany\oxorany.h">
+      <Filter>include\oxorany</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\oxorany\oxorany_include.h">
+      <Filter>include\oxorany</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\framework\dxgi.def">
+      <Filter>framework</Filter>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

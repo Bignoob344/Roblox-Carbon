@@ -33,7 +33,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\version.def">
+    <None Include="src\framework\dxgi.def">
       <Filter>src</Filter>
     </None>
   </ItemGroup>

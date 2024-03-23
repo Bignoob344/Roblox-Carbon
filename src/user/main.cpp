@@ -33,9 +33,9 @@ typedef void(__fastcall* ENEMY_MELEE_DAMAGE_FUNCTION)(__int64 a1, __int64 a2, un
 ENEMY_MELEE_DAMAGE_FUNCTION EnemyBasicDamage = nullptr;
 
 void __fastcall dPickupSample(__int64 a1, int a2, int amount, int sampleType) {
-	PickupSample(a1, a2, 25, 1);
+	PickupSample(a1, a2, 20, 1);
 	PickupSample(a1, a2, 10, 2);
-	PickupSample(a1, a2,  5, 3);
+	PickupSample(a1, a2,  2, 3);
 }
 
 bool __fastcall dIsStratagemUnlocked(__int64 a1, int StratagemId) {
