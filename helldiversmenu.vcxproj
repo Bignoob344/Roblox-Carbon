@@ -11,7 +11,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="globals.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\framework\app-functions.cpp" />
     <ClCompile Include="src\framework\version.cpp" />
@@ -32,6 +31,7 @@
     <ClCompile Include="src\include\imgui\imgui_tables.cpp" />
     <ClCompile Include="src\include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\include\oxorany\oxorany.cpp" />
+    <ClCompile Include="src\user\globals.cpp" />
     <ClCompile Include="src\user\globals.h" />
     <ClCompile Include="src\user\main.cpp" />
   </ItemGroup>

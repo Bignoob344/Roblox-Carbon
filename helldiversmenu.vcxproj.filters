@@ -29,9 +29,6 @@
     <ClCompile Include="src\user\globals.h">
       <Filter>user</Filter>
     </ClCompile>
-    <ClCompile Include="globals.cpp">
-      <Filter>user</Filter>
-    </ClCompile>
     <ClCompile Include="src\framework\app-functions.cpp">
       <Filter>framework</Filter>
     </ClCompile>
@@ -67,6 +64,9 @@
     </ClCompile>
     <ClCompile Include="src\hooks\user32.cpp">
       <Filter>hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\globals.cpp">
+      <Filter>user</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
