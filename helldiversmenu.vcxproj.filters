@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\framework\dxgi.cpp">
+    <ClCompile Include="src\framework\version.cpp">
       <Filter>framework</Filter>
     </ClCompile>
     <ClCompile Include="src\user\main.cpp">
@@ -35,6 +35,39 @@
     <ClCompile Include="src\framework\app-functions.cpp">
       <Filter>framework</Filter>
     </ClCompile>
+    <ClCompile Include="src\hooks\winuser.cpp">
+      <Filter>hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_demo.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_draw.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_tables.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_widgets.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_impl_win32.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\include\imgui\imgui_impl_dx11.cpp">
+      <Filter>include\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\app.cpp">
+      <Filter>hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\menu.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\user32.cpp">
+      <Filter>hooks</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="framework">
@@ -55,12 +88,18 @@
     <Filter Include="user">
       <UniqueIdentifier>{3bce2a74-80a9-42bf-8bdd-aaf71af07b37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\imgui">
+      <UniqueIdentifier>{e2b6fe7b-32c6-4907-b193-66e723a0f174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{92e030b2-d408-4f02-aba0-3687d61cdccc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\framework\SignatureScan.hpp">
       <Filter>framework</Filter>
     </ClInclude>
-    <ClInclude Include="src\framework\dxgi.h">
+    <ClInclude Include="src\framework\version.h">
       <Filter>framework</Filter>
     </ClInclude>
     <ClInclude Include="src\user\main.hpp">
@@ -75,18 +114,42 @@
     <ClInclude Include="src\include\oxorany\oxorany_include.h">
       <Filter>include\oxorany</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\DirectX12.h">
-      <Filter>include</Filter>
-    </ClInclude>
     <ClInclude Include="src\hooks\_hooks.h">
       <Filter>hooks</Filter>
     </ClInclude>
     <ClInclude Include="src\framework\app-functions.h">
       <Filter>framework</Filter>
     </ClInclude>
+    <ClInclude Include="src\include\imgui\imgui.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imgui_internal.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imstb_rectpack.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imstb_textedit.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imstb_truetype.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imgui_impl_win32.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imconfig.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\imgui\imgui_impl_dx11.h">
+      <Filter>include\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\menu.h">
+      <Filter>gui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\framework\dxgi.def">
+    <None Include="src\framework\version.def">
       <Filter>framework</Filter>
     </None>
     <None Include="README.md" />

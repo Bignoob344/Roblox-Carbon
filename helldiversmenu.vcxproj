@@ -14,30 +14,49 @@
     <ClCompile Include="globals.cpp" />
     <ClCompile Include="src\dllmain.cpp" />
     <ClCompile Include="src\framework\app-functions.cpp" />
-    <ClCompile Include="src\framework\dxgi.cpp" />
+    <ClCompile Include="src\framework\version.cpp" />
+    <ClCompile Include="src\gui\menu.cpp" />
+    <ClCompile Include="src\hooks\app.cpp" />
     <ClCompile Include="src\hooks\directx.cpp" />
+    <ClCompile Include="src\hooks\user32.cpp" />
+    <ClCompile Include="src\hooks\winuser.cpp" />
     <ClCompile Include="src\hooks\_hooks.cpp" />
     <ClCompile Include="src\include\detours\detours.cpp" />
     <ClCompile Include="src\include\detours\disasm.cpp" />
     <ClCompile Include="src\include\detours\modules.cpp" />
+    <ClCompile Include="src\include\imgui\imgui.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\include\oxorany\oxorany.cpp" />
     <ClCompile Include="src\user\globals.h" />
     <ClCompile Include="src\user\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\framework\app-functions.h" />
-    <ClInclude Include="src\framework\dxgi.h" />
+    <ClInclude Include="src\framework\version.h" />
     <ClInclude Include="src\framework\SignatureScan.hpp" />
+    <ClInclude Include="src\gui\menu.h" />
     <ClInclude Include="src\hooks\_hooks.h" />
     <ClInclude Include="src\include\detours\detours.h" />
-    <ClInclude Include="src\include\DirectX12.h" />
+    <ClInclude Include="src\include\imgui\imconfig.h" />
+    <ClInclude Include="src\include\imgui\imgui.h" />
+    <ClInclude Include="src\include\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\include\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\include\imgui\imgui_internal.h" />
+    <ClInclude Include="src\include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\include\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\include\imgui\imstb_truetype.h" />
     <ClInclude Include="src\include\oxorany\oxorany.h" />
     <ClInclude Include="src\include\oxorany\oxorany_include.h" />
     <ClInclude Include="src\user\main.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-    <None Include="src\framework\dxgi.def" />
+    <None Include="src\framework\version.def" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -45,6 +64,7 @@
     <ProjectGuid>{0bda66a5-d969-4ab0-a424-760b8fb01f97}</ProjectGuid>
     <RootNamespace>versionproxy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>HellDiversMenu</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -73,13 +93,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>dxgi</TargetName>
+    <TargetName>version</TargetName>
     <IncludePath>$(IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>dxgi</TargetName>
+    <TargetName>version</TargetName>
     <IncludePath>$(IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -94,13 +114,13 @@
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\include\imgui;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>src/framework/dxgi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>src/framework/version.def</ModuleDefinitionFile>
       <AssemblyDebug>true</AssemblyDebug>
     </Link>
   </ItemDefinitionGroup>
@@ -117,7 +137,7 @@
       </PrecompiledHeaderFile>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\include;$(ProjectDir)src\include\detours;$(ProjectDir)src\include\oxorany;$(ProjectDir)src\include\imgui;$(ProjectDir)src\framework;$(ProjectDir)src\hooks;$(ProjectDir)src\user;$(ProjectDir)src\gui</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -125,7 +145,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <ModuleDefinitionFile>src/framework/dxgi.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>src/framework/version.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

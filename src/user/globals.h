@@ -6,11 +6,23 @@
 #include <stdio.h>
 #include "oxorany.h"
 
-typedef uint64_t uintx_t;
-
-extern uintx_t* MethodsTable;
+extern uint64_t* MethodsTable;
 extern HWND WindowHwnd;
-extern HMODULE moduleHandle;
+extern WNDPROC WindowProc;
+extern HMODULE ModuleHandle;
+
+extern bool IsGUIInitialized;
+extern bool ShowMenu;
+
+extern bool fManipulateSamplePickup;
+extern bool fStratagemUnlock;
+extern bool fArmorUnlock;
+extern bool fEquipmentUnlock;
+extern bool fRoutineDeployment;
+extern bool fWeaponAmmoReduction;
+extern bool fStratagemReduction;
+extern bool fStaminaReduction;
+extern bool fEnemyBasicDamage;
 
 void InitializeConsole();
 void DestroyConsole();

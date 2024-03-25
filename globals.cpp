@@ -1,8 +1,21 @@
 #include <globals.h>
 
-uintx_t* MethodsTable = nullptr;
 HWND WindowHwnd = nullptr;
-HMODULE moduleHandle = nullptr;
+WNDPROC WindowProc = nullptr;
+HMODULE ModuleHandle = nullptr;
+
+bool IsGUIInitialized = false;
+bool ShowMenu = false;
+
+bool fManipulateSamplePickup = false;
+bool fStratagemUnlock = false;
+bool fArmorUnlock = false;
+bool fEquipmentUnlock = false;
+bool fRoutineDeployment = false;
+bool fWeaponAmmoReduction = false;
+bool fStratagemReduction = false;
+bool fStaminaReduction = false;
+bool fEnemyBasicDamage = false;
 
 void InitializeConsole() {
 	FILE* pFile = nullptr;
