@@ -15,6 +15,7 @@ extern bool IsGUIInitialized;
 extern bool ShowMenu;
 
 extern bool fManipulateSamplePickup;
+extern int SampleAmount;
 extern bool fStratagemUnlock;
 extern bool fArmorUnlock;
 extern bool fEquipmentUnlock;

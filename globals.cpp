@@ -8,6 +8,7 @@ bool IsGUIInitialized = false;
 bool ShowMenu = false;
 
 bool fManipulateSamplePickup = false;
+int SampleAmount = 1;
 bool fStratagemUnlock = false;
 bool fArmorUnlock = false;
 bool fEquipmentUnlock = false;

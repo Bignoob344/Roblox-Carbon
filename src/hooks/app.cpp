@@ -2,9 +2,7 @@
 #include "globals.h"
 
 void dPickupSample(__int64 a1, int a2, int amount, int sampleType) {
-	PickupSample(a1, a2, 20, 1);
-	PickupSample(a1, a2, 10, 2);
-	PickupSample(a1, a2, 2, 3);
+	PickupSample(a1, a2, (fManipulateSamplePickup) ? SampleAmount : amount, sampleType);
 }
 
 bool dIsStratagemUnlocked(__int64 a1, int StratagemId) {
@@ -29,10 +27,7 @@ bool dIsEquipmentUnlocked(DWORD* a1, int equipmentId) {
 }
 
 void dRoutineDeploymentTime(__int64* a1, float timeSteps) {
-	if (fRoutineDeployment)
-		return RoutineDeploymentTime(a1, 100.f);
-	
-	RoutineDeploymentTime(a1, timeSteps);
+	RoutineDeploymentTime(a1, (fRoutineDeployment) ? 100.f : timeSteps);
 }
 
 __int64 dWeaponAmmoReduction(__int64 a1, unsigned int weaponId) {
@@ -57,8 +52,5 @@ void dStaminaReduction(__int64 a1, int a2, float a3) {
 }
 
 void dEnemyBasicDamage(__int64 target, __int64 a2, unsigned int a3, int damage, unsigned int typeMaybe) {
-	if (fEnemyBasicDamage)
-		EnemyBasicDamage(target, a2, a3, 0, typeMaybe);
-
-	EnemyBasicDamage(target, a2, a3, damage, typeMaybe);
+	EnemyBasicDamage(target, a2, a3, (fEnemyBasicDamage) ? 0 : damage, typeMaybe);
 }
