@@ -13,6 +13,13 @@ Please compile the project in **Release** mode. Debug does not work properly and
 ### Version Proxy (version.dll)
 Will automatically be loaded by the Game itself if the dll is in the game directory.
 
+### How to Run
+1. Move the `version.dll` into the game directory in `/bin`
+2. Change the Launch Options in Steam for the game into `--use-d3d11` 
+3. Start the game
+4. Press DELETE to show the menu
+5. For performance increase, change into fullscreen mode (Dx11 being funky in HD2)
+
 ### Running on Proton (Version Proxy Only)
 First you will need protontricks, you can install it with your packager of choice.
 
