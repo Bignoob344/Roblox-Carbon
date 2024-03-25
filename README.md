@@ -1,4 +1,4 @@
-# Helldivers2Menu [![Discord](https://img.shields.io/badge/Discord-Invite-7289DA.svg?logo=Discord&style=flat-square)](https://discord.gg/AUpXd3VUh8) [![Paypal](https://img.shields.io/badge/PayPal-Donate-Green.svg?logo=Paypal&style=flat-square)](https://www.paypal.com/donate/?hosted_button_id=TYMU92FD9D9UW)
+# Helldivers2Menu
 
 <p align="center">
    Helldivers2Menu is a Cheat Menu for the popular Game Helldivers 2.
@@ -23,17 +23,17 @@ Will automatically be loaded by the Game itself if the dll is in the game direct
 ### Running on Proton (Version Proxy Only)
 First you will need protontricks, you can install it with your packager of choice.
 
-1. Make sure you are running Among Us under Proton  
+1. Make sure you are running Helddivers 2 under Proton  
    You can check by going to **Properties -> Compatibility**
-3. Put version.dll into Among Us folder
+3. Put version.dll into Helldivers 2 bin folder
 4. Run `protontricks --gui`
-5. Choose **Among Us**
+5. Choose **HELLDIVERS 2**
 6. Click on **Select the default wineprefix** and then **OK**
 7. Click on **Run winecfg** and then **OK**
 8. In the configuration window, click on **Libraries**
 9. Type `version` into the **New override for library** input
 10. Click **Add** and then **Apply**
-11. AmongUsMenu should now work properly in the game
+11. Helldivers2Menu should now work properly in the game
 
 ### Default Hotkeys
 - Show Menu - DELETE
