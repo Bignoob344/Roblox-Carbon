@@ -64,7 +64,7 @@
     <ProjectGuid>{0bda66a5-d969-4ab0-a424-760b8fb01f97}</ProjectGuid>
     <RootNamespace>versionproxy</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>HellDiversMenu</ProjectName>
+    <ProjectName>HellDivers2Menu</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">

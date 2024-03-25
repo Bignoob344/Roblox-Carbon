@@ -11,7 +11,7 @@ LRESULT APIENTRY dWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 void dPickupSample(__int64 a1, int a2, int amount, int sampleType);
 bool dIsStratagemUnlocked(__int64 a1, int StratagemId);
 bool dIsArmorUnlocked(int* armorObject);
-char dIsEquipmentUnlocked(DWORD* a1, int equipmentId);
+bool dIsEquipmentUnlocked(DWORD* a1, int equipmentId);
 void dRoutineDeploymentTime(__int64* a1, float timeSteps);
 __int64 dWeaponAmmoReduction(__int64 a1, unsigned int weaponId);
 __int64 dStratagemReduction(__int64 a1, unsigned int a2, char a3, __int64 a4);

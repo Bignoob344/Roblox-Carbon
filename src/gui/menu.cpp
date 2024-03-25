@@ -3,7 +3,7 @@
 #include "globals.h"
 
 void Menu::Render() {
-	ImGui::Begin("Main Menu", &ShowMenu, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar);
+	ImGui::Begin("HellDivers2Menu", &ShowMenu, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoScrollbar);
 	ImGui::SetWindowSize(ImVec2(300, 300));
 
 	ImGui::Checkbox("Manipulate Sample Pickup", &fManipulateSamplePickup);

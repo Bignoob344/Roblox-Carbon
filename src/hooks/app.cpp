@@ -18,14 +18,14 @@ bool dIsArmorUnlocked(int* armorObject) {
 	if (fArmorUnlock)
 		return true;
 
-	IsArmorUnlocked(armorObject);
+	return IsArmorUnlocked(armorObject);
 }
 
-char dIsEquipmentUnlocked(DWORD* a1, int equipmentId) {
+bool dIsEquipmentUnlocked(DWORD* a1, int equipmentId) {
 	if (fEquipmentUnlock)
 		return true;
 
-	IsEquipmentUnlocked(a1, equipmentId);
+	return IsEquipmentUnlocked(a1, equipmentId);
 }
 
 void dRoutineDeploymentTime(__int64* a1, float timeSteps) {
@@ -39,14 +39,14 @@ __int64 dWeaponAmmoReduction(__int64 a1, unsigned int weaponId) {
 	if (fWeaponAmmoReduction)
 		return NULL;
 
-	WeaponAmmoReduction(a1, weaponId);
+	return WeaponAmmoReduction(a1, weaponId);
 }
 
 __int64 dStratagemReduction(__int64 a1, unsigned int a2, char a3, __int64 a4) {
 	if (fStratagemReduction)
 		return NULL;
 
-	StratagemReduction(a1, a2, a3, a4);
+	return StratagemReduction(a1, a2, a3, a4);
 }
 
 void dStaminaReduction(__int64 a1, int a2, float a3) {

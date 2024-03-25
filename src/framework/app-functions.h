@@ -17,7 +17,7 @@ extern IS_STRATAGEM_UNLOCKED_FUNCTION IsStratagemUnlocked;
 typedef bool(__fastcall* IS_ARMOR_UNLOCKED_FUNCTION)(int* a1);
 extern IS_ARMOR_UNLOCKED_FUNCTION IsArmorUnlocked;
 
-typedef char(__fastcall* IS_EQUIPMENT_UNLOCKED_FUNCTION)(DWORD* a1, int a2);
+typedef bool(__fastcall* IS_EQUIPMENT_UNLOCKED_FUNCTION)(DWORD* a1, int a2);
 extern IS_EQUIPMENT_UNLOCKED_FUNCTION IsEquipmentUnlocked;
 
 typedef void(__fastcall* ROUTINE_DEPLOYMENT_TIME_FUNCTION)(__int64* a1, float a2);
